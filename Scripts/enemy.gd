@@ -7,3 +7,6 @@ func _physics_process(delta: float) -> void:
 	
 func move_enemy(delta: float):
 	global_position.x += -speed * delta
+
+func kill_enemy():
+	queue_free()
