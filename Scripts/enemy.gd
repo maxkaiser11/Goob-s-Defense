@@ -10,3 +10,8 @@ func move_enemy(delta: float):
 
 func kill_enemy():
 	queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	body.take_damage()
+	kill_enemy()
